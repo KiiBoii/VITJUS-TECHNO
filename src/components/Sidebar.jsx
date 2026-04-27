@@ -16,7 +16,7 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { AiFillSchedule } from "react-icons/ai";
 
 const menuItems = [
-  { name: 'Dashboard', icon: <LayoutDashboard />, path: '/' },
+  { name: 'Dashboard', icon: <LayoutDashboard />, path: '/dashboard' },
   { name: 'Produk', icon: <Box />, path: '/produk' },
   { name: 'Sales', icon: <ShoppingCart />, path: '/sales' },
   { name: 'Laporan', icon: <BarChart2 />, path: '/laporan' },

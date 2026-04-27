@@ -1,5 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://jbcqrxcpywwgldjodgtr.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpiY3FyeGNweXd3Z2xkam9kZ3RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA4MzUzNTYsImV4cCI6MjA2NjQxMTM1Nn0.G6OufQjmyi9nmEXun2s3smfjMUs2xLRde2pWipZ7SsA'
+// Menggunakan URL dan Key yang Anda temukan tadi
+const supabaseUrl = 'https://hvcoqvrocolzwennzcss.supabase.co'
+const supabaseKey = 'sb_publishable_TVDzoZr2qmfU7De8z8qtbA_ldLKN5z4'
+
 export const supabase = createClient(supabaseUrl, supabaseKey)

@@ -365,7 +365,7 @@ import CustomerForm from "./CustomerForm";
 import Swal from 'sweetalert2'; // Pastikan SweetAlert2 sudah diinstal dan diimport
 
 // Import Feather Icons atau Font Awesome jika digunakan
-import { Plus, Edit, Trash2, Search, Filter, Calendar, Users, BarChart } from 'lucide-react'; // Contoh menggunakan lucide-react
+import { Plus, Edit, Trash2, Search, Filter, Calendar, Users, BarChart, X } from 'lucide-react'; // Contoh menggunakan lucide-react
 // Jika menggunakan Font Awesome, pastikan ada CDN atau import yang sesuai di project Anda
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 

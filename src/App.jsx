@@ -1,8 +1,21 @@
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
+
 import viteLogo from '/vite.svg'
+import ScrollToTop from "./components/ScrollToTop";
+import LandingPage from './Pages/LandingPage'
+import AboutPage from './Pages/About';
+import MenuPage from './Pages/Menu'
+import LocationPage from './Pages/Location';
+import LoginPage from './Pages/LoginPage';
 // import './App.css'
-import { Routes, Route } from 'react-router-dom'
+
 import Dashboard from './Pages/Dashboard'
 import Sidebar from './components/Sidebar'
 import MainLayout from './components/MainLayout'
@@ -19,14 +32,20 @@ import BranchOutlet from './Pages/BranchOutlet'
 import Feedback from './Pages/Feedback'
 import ShiftManagement from './Pages/ShiftManagement'
 
-
 function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/menu" element={<MenuPage />} />        
+        <Route path="/location" element={<LocationPage />} />
+        <Route path="/login" element={<LoginPage />} />
+
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Dashboard />}/>
+          <Route path="/dashboard" element={<Dashboard />}/>
           <Route path="/faq" element={<Faq />}/>
           <Route path="/customer" element={<Customer />}/>
           <Route path="/laporan" element={<Penjualan />}/>

@@ -1,3 +1,4 @@
+
 import { Search, User } from 'lucide-react'
 
 const Header = () => {

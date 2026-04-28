@@ -41,7 +41,9 @@ const Sidebar = () => {
 
   return (
     <aside className="bg-white w-64 h-screen shadow-lg px-4 py-6 hidden md:block">
-      <div className="text-xl font-bold mb-8 text-orange-700">Tomoro Coffee</div>
+     <Link to="/" className="flex items-center">
+        <img src="/images/logo.png" alt="VitJus" className="h-10 md:h-12 object-contain"/>
+      </Link>
       <nav className="space-y-1">
         {menuItems.map((item) => (
           <Link

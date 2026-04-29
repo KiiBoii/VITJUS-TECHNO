@@ -1,3 +1,4 @@
+import React from 'react';
 import { BsPeopleFill } from "react-icons/bs";
 import {
   LayoutDashboard,
@@ -7,7 +8,6 @@ import {
   Settings,
   LogIn,
   UserPlus,
-  User,
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaQuestionCircle, FaUser } from "react-icons/fa";
@@ -25,15 +25,8 @@ const menuItems = [
   { name: 'Feedback', icon: <MdFeedback />, path: '/feedback' },
   { name: 'Shift', icon: <AiFillSchedule />, path: '/shift' },
   { name: 'Outlet', icon: <FaMapLocationDot />, path: '/branch' },
-  // { name: 'HomeUser', icon: <FaMapLocationDot />, path: '/HomeUser' },
   { name: 'User', icon: <FaUser />, path: '/user' },
   { name: 'Karyawan', icon: <FaUser />, path: '/karyawan' },
-];
-
-const accountItems = [
-  { name: 'Pengaturan Akun', icon: <Settings />, path: '/akun' },
-  { name: 'Sign In', icon: <LogIn />, path: '/signin' },
-  { name: 'Sign Up', icon: <UserPlus />, path: '/signup' },
 ];
 
 const Sidebar = () => {
@@ -41,38 +34,44 @@ const Sidebar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-claurine
-    <aside className="bg-white w-64 h-screen shadow-lg px-4 py-6 hidden md:block">
-     <Link to="/" className="flex items-center">
-        <img src="/images/logo.png" alt="VitJus" className="h-10 md:h-12 object-contain"/>
-      </Link>
-
-    <aside className="bg-white w-64 min-h-screen shadow-lg px-4 py-6 hidden md:block">
-      <div className="text-xl font-bold mb-8 text-orange-700">
-        <img className="px-8" src="https://images.seeklogo.com/logo-png/51/1/tomoro-coffee-logo-png_seeklogo-513701.png" alt="Tomoro Coffee Logo" />
+    <aside className="bg-white w-64 min-h-screen shadow-lg px-4 py-6 hidden md:block border-r border-gray-200">
+      {/* Logo Section */}
+      <div className="flex items-center justify-center mb-8">
+        <Link to="/">
+          <img 
+            src="https://images.seeklogo.com/logo-png/51/1/tomoro-coffee-logo-png_seeklogo-513701.png" 
+            alt="Tomoro Coffee Logo" 
+            className="h-12 object-contain px-4"
+          />
+        </Link>
       </div>
- main
+
+      {/* Navigation Menu */}
       <nav className="space-y-1">
         {menuItems.map((item) => (
           <Link
             key={item.name}
             to={item.path}
-            // Tambahkan kelas border-l-4 dan border-orange-500 untuk penanda aktif
-            // Sesuaikan padding-left (pl) agar tidak bergeser jika border ditambahkan
             className={`
-              flex items-center gap-3 px-3 py-2 rounded-lg transition
+              flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200
               ${isActive(item.path)
-                ? 'bg-orange-100 text-orange-800 font-semibold border-l-4 border-orange-500 pl-2' // Item aktif: background lebih terang, border kiri
-                : 'text-gray-700 hover:bg-orange-50' // Item tidak aktif: hover dengan background sangat terang
+                ? 'bg-orange-100 text-orange-800 font-semibold border-l-4 border-orange-500 pl-2'
+                : 'text-gray-700 hover:bg-orange-50 hover:text-orange-600'
               }
             `}
           >
-            <span className="w-5 h-5">{item.icon}</span>
-            {item.name}
+            <span className={`w-5 h-5 ${isActive(item.path) ? 'text-orange-600' : 'text-gray-500'}`}>
+              {item.icon}
+            </span>
+            <span className="text-sm">{item.name}</span>
           </Link>
         ))}
-
       </nav>
+
+      {/* Bagian bawah (Optional: Logout button bisa ditaruh di sini) */}
+      <div className="mt-auto pt-10">
+         <p className="text-[10px] text-gray-400 text-center">VitJus Techno © 2026</p>
+      </div>
     </aside>
   );
 };

@@ -1,3 +1,7 @@
+claurine
+
+import { Search, User } from 'lucide-react'
+
 // // import React from 'react'; // Pastikan React diimpor
 // // import { useLocation } from 'react-router-dom'; // Import useLocation
 // // import { Search, User } from 'lucide-react';
@@ -252,6 +256,7 @@ import { Search, LogOut } from 'lucide-react';
 import { FaBell } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+ main
 
 const Header = () => {
   const location = useLocation();

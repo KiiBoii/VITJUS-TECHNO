@@ -41,10 +41,17 @@ const Sidebar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
+claurine
+    <aside className="bg-white w-64 h-screen shadow-lg px-4 py-6 hidden md:block">
+     <Link to="/" className="flex items-center">
+        <img src="/images/logo.png" alt="VitJus" className="h-10 md:h-12 object-contain"/>
+      </Link>
+
     <aside className="bg-white w-64 min-h-screen shadow-lg px-4 py-6 hidden md:block">
       <div className="text-xl font-bold mb-8 text-orange-700">
         <img className="px-8" src="https://images.seeklogo.com/logo-png/51/1/tomoro-coffee-logo-png_seeklogo-513701.png" alt="Tomoro Coffee Logo" />
       </div>
+ main
       <nav className="space-y-1">
         {menuItems.map((item) => (
           <Link

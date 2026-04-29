@@ -1,0 +1,115 @@
+/* .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  background-color: transparent; 
+} */
+
+/* Efek saat di-scroll */
+/* .scrolled {
+  padding: 10px 0;
+  background-color: rgba(145, 198, 66, 0.95); 
+  box-shadow: 0 4px 20px rgba(25, 65, 38, 0.1);
+  backdrop-filter: blur(5px); 
+} */
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+} */
+
+/* -- STYLING LOGO -- */
+/* .logoPlaceholder {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.logoVit {
+  color: var(--vitjus-vit); 
+  text-shadow: 
+    -1px -1px 0 var(--vitjus-outline),  
+     1px -1px 0 var(--vitjus-outline),
+    -1px  1px 0 var(--vitjus-outline),
+     1px  1px 0 var(--vitjus-outline);
+} */
+
+/* .logoJus {
+  color: var(--vitjus-jus);
+  text-shadow: 
+    -1px -1px 0 var(--vitjus-outline),  
+     1px -1px 0 var(--vitjus-outline),
+    -1px  1px 0 var(--vitjus-outline),
+     1px  1px 0 var(--vitjus-outline);
+} */
+
+/* -- STYLING NAVIGASI -- */
+/* .navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--vitjus-jus);
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+} */
+
+/* Hover & Active State */
+/* .navLink:hover,
+.navLink.active {
+  color: var(--vitjus-outline);
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--vitjus-vit); 
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+} */
+/* 
+.navLink:hover .underline,
+.navLink.active .underline {
+  transform: scaleX(1);
+  transform-origin: left;
+} */
+
+/* -- STYLING CTA -- */
+/* .loginBtn {
+    text-decoration: none;
+    background-color: var(--vitjus-jus);
+    color: var(--vitjus-text-dark);
+    padding: 10px 20px;
+    border-radius: 50px; 
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.loginBtn:hover {
+    transform: translateY(-3px); 
+    background-color: var(--vitjus-vit);
+    color: var(--vitjus-jus);
+} */

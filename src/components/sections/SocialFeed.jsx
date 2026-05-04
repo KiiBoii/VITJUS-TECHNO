@@ -7,32 +7,32 @@ const POSTS = [
   {
     id: 1,
     image: "/images/post1.jfif",
-    link: "https://www.instagram.com/p/example1/",
+    link: "https://www.instagram.com/vitjuspku",
   },
   {
     id: 2,
     image: "/images/post2.jfif",
-    link: "https://www.instagram.com/p/example2/",
+    link: "https://www.instagram.com/vitjuspku",
   },
   {
     id: 3,
     image: "/images/post3.jfif",
-    link: "https://www.instagram.com/p/example3/",
+    link: "https://www.instagram.com/vitjuspku",
   },
   {
     id: 4,
     image: "/images/post4.jfif",
-    link: "https://www.instagram.com/p/example4/",
+    link: "https://www.instagram.com/vitjuspku",
   },
   {
     id: 5,
     image: "/images/post5.jfif",
-    link: "https://www.instagram.com/p/example5/",
+    link: "https://www.instagram.com/vitjuspku",
   },
   {
     id: 6,
     image: "/images/post6.jfif",
-    link: "https://www.instagram.com/p/example6/",
+    link: "https://www.instagram.com/vitjuspku",
   },
 ];
 

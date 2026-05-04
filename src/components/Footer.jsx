@@ -12,7 +12,7 @@ const FOOTER_LINKS = {
     ],
     Social: [
         { label: "Instagram", to: "https://instagram.com/vitjuspku" },
-        { label: "TikTok", to: "https://tiktok.com/@vitjus.id" },
+        // { label: "TikTok", to: "https://tiktok.com/@vitjus.id" },
     ],
 };
 

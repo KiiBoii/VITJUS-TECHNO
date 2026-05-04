@@ -18,7 +18,6 @@ const MENU_ITEMS = {
         { name: "Apel", image: "/images/menu/apel.png", price: "Rp 18.000", bestSeller: true, description: "Menjaga kesehatan paru-paru dan menurunkan kolesterol." },
         { name: "Semangka", image: "/images/menu/semangka.png", price: "Rp 18.000", description: "Hidrasi tubuh maksimal dan baik untuk kesehatan ginjal." },
         { name: "Pir", image: "/images/menu/pir.png", price: "Rp 18.000", description: "Membantu meredakan panas dalam dan tenggorokan kering." },
-        { name: "Melon", image: "/images/menu/melon.png", price: "Rp 18.000", description: "Menjaga kesehatan mata dan mengatur tekanan darah." },
     ],
     mixedJuices: [
         { name: "Semangka & Nenas", image: "/images/menu/semangkanenas.png", price: "Rp 24.000", bestSeller: true, description: "Membantu pemulihan otot dan metabolisme tubuh." },
@@ -26,10 +25,6 @@ const MENU_ITEMS = {
         { name: "Pir, Apel & Lemon", image: "/images/menu/pirapellemon.png", price: "Rp 24.000", bestSeller: true, description: "Powerful detoks untuk membersihkan racun dalam tubuh." },
         { name: "Strawberry & Semangka", image: "/images/menu/strawberrysemangka.png", price: "Rp 24.000", description: "Menjaga kesehatan jantung dan pembuluh darah." },
         { name: "Melon, Apel, Susu", image: "/images/menu/melonapelsusu.png", price: "Rp 24.000", description: "Asupan kalsium tinggi dengan rasa yang lembut di mulut." },
-    ],
-    fruitSalad: [
-        { name: "Sop Buah", image: "/images/menu/salad1.png", price: "Rp 20.000", description: "Aneka potongan buah segar dalam kuah madu yang ringan." },
-        { name: "Salad Buah", image: "/images/menu/salad2.png", price: "Rp 25.000", description: "Serat harian lengkap dengan saus yogurt rendah kalori." },
     ],
 };
 
@@ -60,7 +55,7 @@ const MenuCard = ({ item, category }) => {
             )}
 
             <div className="flex justify-center mb-8 overflow-hidden rounded-2xl bg-[#fafbf7]">
-                <img src={item.image} alt={item.name} className="w-full h-[220px] object-contain group-hover:scale-110 transition-transform duration-700 ease-out"/>
+                <img src={item.image} alt={item.name} className="w-full h-[220px] object-contain group-hover:scale-110 transition-transform duration-700 ease-out" />
             </div>
 
             <div className="flex flex-col flex-grow space-y-3">
@@ -72,7 +67,7 @@ const MenuCard = ({ item, category }) => {
                     <h3 className="text-[#194126] text-[24px] font-black leading-tight group-hover:text-[#f9a519] transition-colors">
                         {item.name}
                     </h3>
-                    
+
                     {/* Deskripsi Khasiat */}
                     <p className="text-[#194126]/60 text-sm font-medium leading-relaxed mt-2 line-clamp-2 italic">
                         "{item.description}"
@@ -90,6 +85,13 @@ const MenuCard = ({ item, category }) => {
 };
 
 const MenuPage = () => {
+    const masks = [
+        { src: "/images/raspberry.png", alt: "Raspberry", rotate: "-rotate-12" },
+        { src: "/images/greenapple.png", alt: "Apple", rotate: "rotate-12" },
+        { src: "/images/mango.png", alt: "Mango", rotate: "-rotate-6" },
+        { src: "/images/banana.png", alt: "Banana", rotate: "rotate-6" }
+    ];
+
     return (
         <div className="bg-[#fafbf7] min-h-screen">
             <Navbar />
@@ -106,6 +108,19 @@ const MenuPage = () => {
                             Nikmati kesegaran racikan spesial kami dari 100% buah asli.
                         </span>
                     </p>
+
+                    {/* Maskot Mobile */}
+                    <div className="flex md:hidden justify-center items-center gap-4 mt-8">
+                        {masks.map((m, i) => (
+                            <img
+                                key={i}
+                                src={m.src}
+                                alt={m.alt}
+                                className={`w-14 h-14 object-contain ${m.rotate} animate-pulse`}
+                                style={{ animationDelay: `${i * 0.2}s` }}
+                            />
+                        ))}
+                    </div>
                 </div>
 
                 {/* Floating Elements */}
@@ -121,12 +136,12 @@ const MenuPage = () => {
                 <div className="hidden md:block absolute bottom-[15%] right-[18%] animate-float opacity-85">
                     <img src="/images/banana.png" alt="Banana" className="w-[100px] h-[100px] object-contain rotate-[-10deg]" />
                 </div>
-            </section>
+            </section >
 
             {/* CATEGORY SECTIONS */}
-            <main className="max-w-7xl mx-auto py-20 px-6 space-y-24">
+            < main className="max-w-7xl mx-auto py-20 px-6 space-y-24" >
                 {/* NEW ARRIVALS */}
-                <section>
+                <div section >
                     <div className="text-center mb-12">
                         <h2 className="text-4xl md:text-6xl font-black text-[#194126] mb-4">
                             New Arrivals
@@ -138,34 +153,36 @@ const MenuPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {NEW_ARRIVALS.map((item, idx) => (
-                            <MenuCard key={idx} item={item} category="New Arrival"/>
+                            <MenuCard key={idx} item={item} category="New Arrival" />
                         ))}
                     </div>
-                </section>
+                </div>
 
                 {/* DYNAMIC CATEGORIES */}
-                {Object.entries(MENU_ITEMS).map(([key, items]) => (
-                    <section key={key}>
-                        <div className="flex items-center gap-4 mb-10">
-                            <h2 className="text-3xl md:text-4xl font-black text-[#194126] uppercase italic">
-                                {key.replace(/([A-Z])/g, ' $1').trim()}
-                            </h2>
-                            <div className="h-[4px] flex-1 bg-[#91c642]/50 rounded-full"></div>
-                        </div>
+                {
+                    Object.entries(MENU_ITEMS).map(([key, items]) => (
+                        <section key={key}>
+                            <div className="flex items-center gap-4 mb-10">
+                                <h2 className="text-3xl md:text-4xl font-black text-[#194126] uppercase italic">
+                                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                                </h2>
+                                <div className="h-[4px] flex-1 bg-[#91c642]/50 rounded-full"></div>
+                            </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {items.map((item, idx) => (
-                                <MenuCard key={idx} item={item} category={key.replace(/([A-Z])/g, ' $1')} />
-                            ))}
-                        </div>
-                    </section>
-                ))}
-            </main>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {items.map((item, idx) => (
+                                    <MenuCard key={idx} item={item} category={key.replace(/([A-Z])/g, ' $1')} />
+                                ))}
+                            </div>
+                        </section>
+                    ))
+                }
+            </main >
 
             <TickerBar />
             <CTASection />
             <Footer />
-        </div>
+        </div >
     );
 };
 
